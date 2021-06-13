@@ -4,7 +4,7 @@
   tasks:
    - name: Install packages
      apt:
-      name: "{{ items }}"
+      name: "{{ item }}"
       state: present
      with_items:
       - apt-transport-https
@@ -23,7 +23,7 @@
       state: present
    - name: Install Docker
      apt:
-      name: "{{ items }}"
+      name: "{{ item }}"
       state: latest
      with_items:
       - docker-ce
@@ -56,7 +56,7 @@
       filename: kubernetes.list
    - name: Install K8S packages
      apt:
-      name: "{{ items }}"
+      name: "{{ item }}"
       state: latest
      with_items:
       - kubeadm
