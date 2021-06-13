@@ -2,11 +2,6 @@
 - name: Install the Docker in Ubuntu
   hosts: all
   tasks:
-   - name: Install APT Utilis
-     apt:
-      name: aptitude
-      state: latest
-     become: yes
    - name: Install packages
      apt:
       name: "{{ items }}"
